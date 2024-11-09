@@ -21,15 +21,9 @@ In simpler terms, an inversion is a pair of elements where the earlier element (
 
 3 3 2 1
 
-shell
-Copy code
-
 ### Sample Output 1:
 
 3
-
-markdown
-Copy code
 
 **Explanation:**
 We have a total of 3 pairs which satisfy the condition of inversion:
@@ -42,15 +36,9 @@ We have a total of 3 pairs which satisfy the condition of inversion:
 
 5 2 5 1 3 4
 
-shell
-Copy code
-
 ### Sample Output 2:
 
 4
-
-markdown
-Copy code
 
 **Explanation:**
 We have a total of 4 pairs which satisfy the condition of inversion:
