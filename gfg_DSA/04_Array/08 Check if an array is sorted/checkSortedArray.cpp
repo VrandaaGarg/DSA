@@ -3,6 +3,7 @@
 using namespace std;
 
 //Checking only for ascending order
+//Efficient approach
 
 void checkAscendingSorted(int arr[],int n){
     int res=1;
