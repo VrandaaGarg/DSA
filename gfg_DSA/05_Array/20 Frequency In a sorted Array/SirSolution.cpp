@@ -22,6 +22,8 @@ void printFeq(int arr[], int n)
     }
 }
 
+// Time Complexity: O(n)
+
 int main()
 {
     int arr[5] = {10, 10, 10, 10, 10};
