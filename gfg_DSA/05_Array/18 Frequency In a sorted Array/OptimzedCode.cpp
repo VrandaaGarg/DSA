@@ -5,7 +5,7 @@ void PrintFeqOfElements(int arr[], int n)
 {
     int feq = 1;
 
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (i < n && arr[i] == arr[i - 1])
         {
@@ -17,7 +17,6 @@ void PrintFeqOfElements(int arr[], int n)
             feq = 1;
         }
     }
-    cout << arr[n - 1] << " " << feq << "\n";
 }
 
 // Time Complexity: O(n)

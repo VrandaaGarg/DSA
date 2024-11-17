@@ -59,20 +59,3 @@ For the second test case, you are given <code>arr = {0, 6, 4, 8, 9}</code>. Then
 1
 5
 </pre>
-<h3>Code Implementation:</h3>
-<pre>
-#include &lt;bits/stdc++.h&gt;
-
-int maxDifference(int n, std::vector<int> &arr)
-{
-std::sort(arr.begin(), arr.end());
-int maxRes = arr[1] - arr[0];
-for (int i = 2; i < arr.size(); i++) {
-if (arr[i] - arr[i - 1] > maxRes) {
-maxRes = arr[i] - arr[i - 1];
-}
-}
-return maxRes;
-}
-
-</pre>
