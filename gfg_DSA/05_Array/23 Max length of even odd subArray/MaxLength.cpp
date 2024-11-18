@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Bsed on the concept of Kadane's Algorithm
+// Based on the concept of Kadane's Algorithm
 // We begin traversing from the second element of the array (i=1)
 // For every element there are two cases:
 // 1. Either u begin a new sub array
