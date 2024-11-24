@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Example arr[]={1,2,3}
+// SubArrays={1},{1,2},{1,2,3},{2},{2,3},{3}
+// Remember that the subarray is contiguous
+// So {1,3} is not a subarray of {1,2,3}
+
 // For every element in arr we find the max sum of elements for that particular element
 // Then we find the max of all the sums
 

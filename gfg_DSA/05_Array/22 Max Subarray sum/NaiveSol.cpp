@@ -1,11 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Example arr[]={1,2,3}
-// SubArrays={1},{1,2},{1,2,3},{2},{2,3},{3}
-// Remember that the subarray is contiguous
-// So {1,3} is not a subarray of {1,2,3}
-
 int MaxSum(int arr[], int n)
 {
     int res = arr[0];
