@@ -59,3 +59,42 @@ This ensures an efficient computation of both non-circular and circular maximum 
 ### Applications:
 
 - Used to solve circular subarray problems in arrays containing both positive and negative numbers.
+
+---
+
+## 3. Moore's Voting Algorithm: Finding Majority Element (Lecture 25)
+
+### Explanation:
+
+Moore's Voting Algorithm is a two-phase algorithm to find the majority element in an array. A **majority element** is defined as an element that appears more than `n/2` times in an array of size `n`.
+
+### Steps:
+
+1. **Phase 1: Candidate Selection**
+
+   - Traverse the array while maintaining a **candidate** and a **count**.
+   - If `count` is `0`, set the current element as the `candidate` and reset `count = 1`.
+   - If the current element matches the `candidate`, increment `count`.
+   - If the current element does not match, decrement `count`.
+   - At the end of this phase, the `candidate` is the potential majority element.
+
+2. **Phase 2: Verification**
+   - Traverse the array again to count the occurrences of the `candidate`.
+   - If the count of the candidate is greater than `n/2`, it is the majority element.
+   - Otherwise, no majority element exists.
+
+### Key Points:
+
+- The algorithm may not always return the first occurrence of the majority element but guarantees correctness if one exists.
+- If no majority element exists, the algorithm will correctly identify this.
+
+### Complexity:
+
+- **Time Complexity:** `O(n)`
+  - Phase 1 and Phase 2 each require a single traversal of the array.
+- **Space Complexity:** `O(1)`
+  - Only a constant amount of extra space is used.
+
+### Applications:
+
+- Efficiently finding the majority element in arrays for voting systems, data streams, and other computational problems.
