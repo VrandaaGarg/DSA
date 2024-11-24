@@ -60,3 +60,9 @@ int main()
     cout << "Index of Majority Element: " << majorityElement(arr, n);
     return 0;
 }
+
+// Working of the algo
+// Bsically some increment the count and some decrement the count
+// So elements that decreement the count they somhow cancel out the votes of elelments
+// And become the leader
+// And then we check if the leader is the majority element or not
