@@ -12,16 +12,17 @@ int MaxConsecutiveOne(int arr[], int n)
         }
         else
         {
-            if (currentOne > maxOne)
-            {
-                maxOne = currentOne;
-                currentOne = 0;
-            }
+            // if (currentOne > maxOne)
+            // {
+            //     maxOne = currentOne;
+            //     currentOne = 0;
+            // }
             // OR
-            //  maxOne = max(maxOne, currentOne);
-            //  currentOne = 0;
+            maxOne = max(maxOne, currentOne);
+            currentOne = 0;
         }
     }
+    maxOne = max(maxOne, currentOne);
     return maxOne;
 }
 
