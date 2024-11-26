@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// structure of a node
 struct Node
 {
     int data;
@@ -13,7 +14,7 @@ struct Node
     }
 };
 
-//
+// print the linked list
 void printLL(Node *head)
 {
     Node *temp = head;
