@@ -13,6 +13,10 @@ struct Node
         next = NULL;
     }
 };
+// Time Complexity: depends on the position where we have to insert the element
+//  if we have to insert at the end then O(n)
+//  if we have to insert at the beginning then O(1)
+// So worst case time complexity is O(n)
 
 Node *SortedInsert(Node *head, int data)
 {
