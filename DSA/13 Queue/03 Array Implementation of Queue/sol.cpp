@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// We maintain front at the starting of the queue and rear at the end of the queue.
+
 struct Queue
 {
     int front, rear;
@@ -8,19 +10,20 @@ struct Queue
     int max;
     Queue(int c)
     {
-        max = c;
-        front = rear = -1;
-        arr = new int[max];
+        max = c;            // max size of queue
+        front = rear = -1;  // initially front and rear are at -1
+        arr = new int[max]; // dynamic memory allocation
     }
 
     void enque(int x)
     {
-        if (front == max - 1)
+        if (front == max - 1) // Overflow Condition
         {
             cout << "OVERFLOW" << endl;
             return;
         }
 
+        // Updating front and rear
         if (front == -1)
         {
             front++;
@@ -32,12 +35,13 @@ struct Queue
 
     void deque()
     {
-        if (front == -1)
+        if (front == -1) // Underflow Condition
         {
             cout << "UNDERFLOW" << endl;
             return;
         }
 
+        // Updating front and rear
         if (front == rear)
         {
             front = rear = -1;
@@ -46,6 +50,18 @@ struct Queue
 
         front++;
     }
+
+    // OR
+    // void deque(){
+    //      if(front == -1){
+    //          cout << "UNDERFLOW" << endl;
+    //          return;
+    //      }
+    //      for(int i = 0; i < size-1; i++){
+    //          arr[i] = arr[i+1];
+    //      }
+    //      size--;
+    //  }
 
     int getFront()
     {
