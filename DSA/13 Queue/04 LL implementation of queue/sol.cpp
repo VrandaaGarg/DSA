@@ -26,6 +26,8 @@ struct Queue
         top = 0;
     }
 
+    // Corner case:
+    // 1. when queue is empty so both front and rear will be updated
     void enque(int x)
     {
         Node *newNode = new Node(x);
@@ -40,6 +42,9 @@ struct Queue
         top++;
     }
 
+    // Corner case:
+    // 1. when underflow
+    // 2. when only one element is present
     void deque()
     {
         if (front == NULL)
