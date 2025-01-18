@@ -3,6 +3,7 @@ using namespace std;
 
 // initially front=0, rear=-1
 
+// rear = (front + size - 1) % cap;
 struct Deque
 {
     int size, cap, front, rear;
@@ -13,7 +14,6 @@ struct Deque
         cap = c;  // capacity of deque
         front = 0;
         arr = new int[cap];
-        rear = (front + size - 1) % cap; // rear = -1 initially
     }
 
     bool isFull()
@@ -59,8 +59,8 @@ struct Deque
             return;
         }
 
-        rear = (rear + 1) % cap; // to make it circular
-        arr[rear] = x;
+        int newRear = (front + size) % cap;
+        arr[newRear] = x;
         size++;
     }
 
@@ -71,8 +71,6 @@ struct Deque
             cout << "UNDERFLOW" << endl;
             return;
         }
-
-        rear = (rear + cap - 1) % cap; // to make it circular
         size--;
     }
 
@@ -83,7 +81,7 @@ struct Deque
             cout << "UNDERFLOW" << endl;
             return -1;
         }
-        return arr[rear];
+        return arr[(front + size - 1) % cap];
     }
 
     int getFront()
