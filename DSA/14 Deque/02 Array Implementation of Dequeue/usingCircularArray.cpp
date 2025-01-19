@@ -71,6 +71,7 @@ struct Deque
             cout << "UNDERFLOW" << endl;
             return;
         }
+        rear = (front + size - 1) % cap;
         size--;
     }
 
