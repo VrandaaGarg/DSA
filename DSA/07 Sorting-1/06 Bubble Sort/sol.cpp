@@ -1,13 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// It os simple comparison based sorting algorithm
-// Take O(n^2) time complexity
-// It has multiple passes
-// First pass will put the largest element at the end
-// Second pass will put the second largest element at the second last position
-// We keep on doing this until the array is sorted
-
 // Example
 // 2 10 8 7
 

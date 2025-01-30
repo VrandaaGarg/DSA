@@ -20,7 +20,3 @@ void bubbleSort(int arr[], int n)
         }
     } // means if array is sorted then it did linear time complexity
 }
-
-// Stability in Bubble sort Algo
-// It is stable because it compares adjacent elements and swaps them only if they are in wrong order
-// It do not change order of equal element
