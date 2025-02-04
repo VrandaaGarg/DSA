@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int partition(int arr[], int l, int h)
+int LomutoPartition(int arr[], int l, int h)
 {
     int pivot = arr[h];
     int i = l - 1; // i as window of smaller elements than pivot
@@ -14,16 +14,16 @@ int partition(int arr[], int l, int h)
         }
     }
     swap(arr[i + 1], arr[h]);
-    return i + 1;
+    return i + 1; // return the position of pivot element
 }
 
 void qSort(int arr[], int l, int h)
 {
     if (l < h) // if l becomes equal to h, it means we have only one element left and it is already sorted
     {
-        int p = partition(arr, l, h); // p is the new position of pivot element
-        qSort(arr, l, p - 1);         // recursive call for left part
-        qSort(arr, p + 1, h);         // recursive call for right part
+        int p = LomutoPartition(arr, l, h); // p is the new position of pivot element
+        qSort(arr, l, p - 1);               // recursive call for left part
+        qSort(arr, p + 1, h);               // recursive call for right part
     }
 }
 
