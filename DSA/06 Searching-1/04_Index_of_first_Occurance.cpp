@@ -3,6 +3,7 @@ using namespace std;
 
 // In a sorted arry we have to find the index of first occurance of a number
 
+// Recusrive approach
 int RecursiveFirstOcc(int arr[], int l, int h, int x)
 {
     if (l > h)
@@ -33,6 +34,7 @@ int RecursiveFirstOcc(int arr[], int l, int h, int x)
     }
 }
 
+// Iterative approach
 int IterativeFirstOccurance(int arr[], int n, int k)
 {
     int l = 0, h = n - 1, mid = (l + h) / 2;
