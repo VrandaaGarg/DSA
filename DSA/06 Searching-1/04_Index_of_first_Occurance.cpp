@@ -15,11 +15,11 @@ int RecursiveFirstOcc(int arr[], int l, int h, int x)
 
     if (arr[mid] < x)
     {
-        RecursiveFirstOcc(arr, mid + 1, h, x);
+        return RecursiveFirstOcc(arr, mid + 1, h, x);
     }
     else if (arr[mid] > x)
     {
-        RecursiveFirstOcc(arr, l, mid - 1, x);
+        return RecursiveFirstOcc(arr, l, mid - 1, x);
     }
     else
     {
@@ -29,7 +29,7 @@ int RecursiveFirstOcc(int arr[], int l, int h, int x)
         }
         else
         {
-            RecursiveFirstOcc(arr, l, mid - 1, x);
+            return RecursiveFirstOcc(arr, l, mid - 1, x);
         }
     }
 }
