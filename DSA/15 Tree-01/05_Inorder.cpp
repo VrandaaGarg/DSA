@@ -26,3 +26,18 @@ void inorder(Node *root)
         inorder(root->right);
     }
 }
+
+int main()
+{
+    Node *root = new Node(10);
+    root->left = new Node(20);
+    root->right = new Node(30);
+    root->right->left = new Node(40);
+    root->right->right = new Node(50);
+
+    cout << "Inorder traversal of the binary tree is: ";
+    inorder(root); // Output: 20 10 40 30 50
+    cout << endl;
+
+    return 0;
+}
