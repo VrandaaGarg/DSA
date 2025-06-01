@@ -26,3 +26,18 @@ void postorder(Node *root)
         cout << root->key << " ";
     }
 }
+
+int main()
+{
+    Node *root = new Node(10);
+    root->left = new Node(20);
+    root->right = new Node(30);
+    root->right->left = new Node(40);
+    root->right->right = new Node(50);
+
+    cout << "Postorder traversal of the binary tree is: ";
+    postorder(root); // Output: 20 40 50 30 10
+    cout << endl;
+
+    return 0;
+}
