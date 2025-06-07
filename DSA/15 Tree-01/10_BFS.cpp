@@ -41,3 +41,7 @@ void printLevelOrder(Node *root)
         }
     }
 }
+
+// Time Complexity: theta(n) where n is the number of nodes in the binary tree
+// Space Complexity: O(n) where n is the number of nodes in the binary tree, due to the queue used for level order traversal
+// or theta(w) where w is the maximum width of the binary tree at any level, which can be less than n
