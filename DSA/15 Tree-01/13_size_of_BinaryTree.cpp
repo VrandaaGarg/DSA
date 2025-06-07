@@ -28,3 +28,9 @@ int sizeOfBinaryTree(Node *root)
 
 // Time Complexity: O(n) where n is the number of nodes in the binary tree, as each node is visited once.
 // Space Complexity: O(h) where h is the height of the binary tree, due to the recursive stack space.
+
+// This is the recursive approach to calculate the size of the binary tree.
+
+// There is also an iterative approach to calculate the size of the binary tree using level order traversal or depth first search (DFS) using a queue or stack respectively.
+// In the iterative approach, we can use a queue to perform level order traversal and count the number of nodes as we traverse the tree.
+// In that time complexity will be O(n) and space complexity will be O(w) where w is the maximum width of the binary tree at any level, which can be less than n.
