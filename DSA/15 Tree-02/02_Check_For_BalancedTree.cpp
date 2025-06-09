@@ -50,3 +50,12 @@ int isBalancedOptimized(Node* root) {
         return max(lh, rh) + 1; // If balanced, return the height of the current node
     }
 }
+
+//Algorithm of the optimized solution:
+// 1. If the node is NULL, return 0 (height).
+// 2. Recursively check the left subtree and get its height.
+// 3. If the left subtree is not balanced (height is -1), return -1.
+// 4. Recursively check the right subtree and get its height.
+// 5. If the right subtree is not balanced (height is -1), return -1.
+// 6. If the height difference between left and right subtrees is greater than 1, return -1 (not balanced).
+// 7. If balanced, return the height of the current node (1 + max height of left and right subtrees).
