@@ -15,3 +15,5 @@ public:
         this->right = NULL;
     }
 };
+
+///////////////////// BST Class
