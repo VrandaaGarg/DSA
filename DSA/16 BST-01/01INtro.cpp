@@ -17,3 +17,40 @@ public:
 };
 
 ///////////////////// BST Class
+////////////////////////////
+
+class BST
+{
+private:
+    Node *root;
+
+public:
+    BST()
+    {
+        root = NULL;
+    }
+
+    // Function to insert values into the BST
+    void insert(int value)
+    {
+        root = insertBST(root, value);
+    }
+
+    // Helper function to insert values into the BST
+    Node *insertBST(Node *node, int value)
+    {
+        if (node == NULL)
+        {
+            return new Node(value);
+        }
+        if (value < node->data)
+        {
+            node->left = insertBST(node->left, value);
+        }
+        else
+        {
+            node->right = insertBST(node->right, value);
+        }
+        return node;
+    }
+};
