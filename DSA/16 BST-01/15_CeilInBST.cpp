@@ -12,3 +12,5 @@ struct Node {
         right = nullptr;
     }
 };
+
+//Ceil is the smallest element in the BST that is greater than or equal to the given key.
