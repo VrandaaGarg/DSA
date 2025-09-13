@@ -19,7 +19,7 @@ struct MinHeap
     int parent(int i) { return (i - 1) / 2; }
 
     // Heapify
-    void minHeapify(int i)
+    void minHeapify(int i) //i is the index of the element which is not heapify
     {
         int lt = left(i);
         int rt = right(i);
